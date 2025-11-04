@@ -153,10 +153,7 @@ class AsyncuaSensor(CoordinatorEntity[AsyncuaCoordinator], SensorEntity):
                 f"Unable to find {self._attr_name} in coordinator {self.coordinator.name}"
             )
         return coordinator_data.get(self._attr_name)
-        #if coordinator_data is None:
-        #    return None
-        #return coordinator_data.get(self._attr_name)
-
+ 
 
     @callback
     def _handle_coordinator_update(self) -> None:
